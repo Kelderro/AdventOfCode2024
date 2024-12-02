@@ -1,0 +1,40 @@
+<Project>
+    <PropertyGroup>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <AnalysisMode>All</AnalysisMode>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <Authors>Rob op den Kelder</Authors>
+        <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+        <Company>Kelderro</Company>
+        <ComVisible>false</ComVisible>
+        <Copyright>Copyright (c) Kelderro 2024-$([System.DateTime]::Now.ToString(yyyy))</Copyright>
+        <CLSCompliant>false</CLSCompliant>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>-->
+        <FileVersion>1.0.0</FileVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <ProductName>AdventOfCode</ProductName>
+        <TargetFramework>net9.0</TargetFramework>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup>
+        <CollectCoverage Condition=" '$(CollectCoverage)' == '' ">true</CollectCoverage>
+        <CoverletOutputFormat>cobertura,json</CoverletOutputFormat>
+        <Exclude>[*.Benchmarks]*,[*Sample*]*,[*Test*]*,[xunit.*]*</Exclude>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference
+                Include="SonarAnalyzer.CSharp"
+                Version="10.3.0.106239"
+                PrivateAssets="all"
+                Condition="$(MSBuildProjectExtension) == '.csproj'"
+        />
+    </ItemGroup>
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>$(AssemblyName).UnitTests</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+</Project>
