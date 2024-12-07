@@ -1,10 +1,12 @@
+using System.Globalization;
+
 namespace AdventOfCode2024.Day01;
 
 /// <summary>
 /// Day 1: Historian Hysteria
 /// https://adventofcode.com/2024/day/1
 /// </summary>
-public static class PuzzleDay01
+internal static class Puzzle
 {
     public static int Part01(IEnumerable<string> input)
     {
@@ -15,8 +17,8 @@ public static class PuzzleDay01
         {
             var values = inputLine.Split("   ");
             
-            leftNumbers.Add(int.Parse(values[0]));
-            rightNumbers.Add(int.Parse(values[1]));
+            leftNumbers.Add(int.Parse(values[0], CultureInfo.InvariantCulture));
+            rightNumbers.Add(int.Parse(values[1], CultureInfo.InvariantCulture));
         }
 
         leftNumbers.Sort();
@@ -35,8 +37,8 @@ public static class PuzzleDay01
         {
             var values = inputLine.Split("   ");
             
-            var valueLeft = int.Parse(values[0]);
-            var valueRight = int.Parse(values[1]);
+            var valueLeft = int.Parse(values[0], CultureInfo.InvariantCulture);
+            var valueRight = int.Parse(values[1], CultureInfo.InvariantCulture);
             
             if (!leftNumbers.TryAdd(valueLeft, 1))
             {

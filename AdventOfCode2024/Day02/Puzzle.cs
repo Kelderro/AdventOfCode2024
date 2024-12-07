@@ -4,7 +4,7 @@
 /// Day 2: Red-Nosed Reports
 /// https://adventofcode.com/2024/day/2
 /// </summary>
-public static class PuzzleDay02
+internal static class Puzzle
 {
     public static int Part01(IEnumerable<string> reports)
     {

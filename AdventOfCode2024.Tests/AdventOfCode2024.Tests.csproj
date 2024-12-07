@@ -27,4 +27,10 @@
       <ProjectReference Include="..\AdventOfCode2024\AdventOfCode2024.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <AssemblyAttribute Include="System.CLSCompliantAttribute">
+            <_Parameter1>false</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+    
 </Project>

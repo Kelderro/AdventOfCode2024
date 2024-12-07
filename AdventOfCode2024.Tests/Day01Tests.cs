@@ -1,5 +1,4 @@
 using AdventOfCode2024.Day01;
-using FluentAssertions;
 
 namespace AdventOfCode2024.Tests;
 
@@ -17,7 +16,7 @@ public class Day01Tests
                              3   3
                              """;
         
-        var result = PuzzleDay01.Part01(input.Split(Environment.NewLine));
+        var result = Puzzle.Part01(input.Split(Environment.NewLine));
 
         result.Should().Be(11);
     }
@@ -34,7 +33,7 @@ public class Day01Tests
                              3   3
                              """;
         
-        var result = PuzzleDay01.Part02(input.Split(Environment.NewLine));
+        var result = Puzzle.Part02(input.Split(Environment.NewLine));
     
         result.Should().Be(31);
     }
