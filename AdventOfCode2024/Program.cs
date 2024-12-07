@@ -13,3 +13,7 @@ Console.WriteLine(AdventOfCode2024.Day03.Puzzle.Part02(input));
 input = await File.ReadAllLinesAsync("Day04/input.txt").ConfigureAwait(false);
 Console.WriteLine(AdventOfCode2024.Day04.Puzzle.Part01(input));
 Console.WriteLine(AdventOfCode2024.Day04.Puzzle.Part02(input));
+
+input = await File.ReadAllLinesAsync("Day05/input.txt").ConfigureAwait(false);
+Console.WriteLine(AdventOfCode2024.Day05.Puzzle.Part01(input));
+Console.WriteLine(AdventOfCode2024.Day05.Puzzle.Part02(input));
